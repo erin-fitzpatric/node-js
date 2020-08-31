@@ -16,21 +16,21 @@ fs.writeFile('./transcript1.txt', 'hello, again', () => {
 });
 
 // directories
-// if (!fs.existsSync('./assets')) {
-//     fs.mkdir('./assets', (err) => {
-//         if (err) {
-//             console.log(err);
-//         }
-//         console.log('folder created');
-//     })
-// } else {
-//     fs.rmdir('./assets', (err) => {
-//         if (err) {
-//             console.log(err);
-//         }
-//         console.log('folder deleted');
-//     })
-// }
+if (!fs.existsSync('./assets')) {
+    fs.mkdir('./assets', (err) => {
+        if (err) {
+            console.log(err);
+        }
+        console.log('folder created');
+    })
+} else {
+    fs.rmdir('./assets', (err) => {
+        if (err) {
+            console.log(err);
+        }
+        console.log('folder deleted');
+    })
+};
 
 // deleting files
 if (fs.existsSync('./deleteme.txt')) {
@@ -40,4 +40,4 @@ if (fs.existsSync('./deleteme.txt')) {
         }
         console.log("file deleted!");
     })
-}
+};
